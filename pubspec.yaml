@@ -37,6 +37,7 @@ dependencies:
   flutter_hooks: ^0.18.2
   hooks_riverpod: ^1.0.3
   provider: ^6.0.2
+  flutter_swiper: ^1.1.6
 
 dev_dependencies:
   flutter_test:
@@ -76,7 +77,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
+  fonts:
+    - family: Raleway
+      fonts:
+        - asset: fonts/Raleway-Regular.ttf
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
