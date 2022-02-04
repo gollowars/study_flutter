@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class PlanetInfo {
   final int position;
   final String name;
