@@ -1,7 +1,7 @@
 class UserResponse {
   final String message;
   final List<User> users;
-  final int total;
+  final String total;
 
   UserResponse(
       {required this.message, required this.users, required this.total});
@@ -10,9 +10,10 @@ class UserResponse {
     final message = json['message'];
     final total = json['total'];
 
-    final List<Map<String, dynamic>> usersjson = json['users'];
+    var json2 = json;
+    final List<dynamic> usersjson = json2['users'];
 
-    const List<User> users = [];
+    List<User> users = [];
     for (var element in usersjson) {
       users.add(User.fromJson(element));
     }
@@ -25,7 +26,7 @@ class User {
   final String userId;
   final String firstname;
   final String lastname;
-  final List<Map<String, String>> friends;
+  final List<dynamic> friends;
 
   User(
       {required this.userId,
@@ -33,7 +34,7 @@ class User {
       required this.lastname,
       required this.friends});
 
-  factory User.fromJson(Map<String, dynamic> json) {
+  factory User.fromJson(dynamic json) {
     return User(
       userId: json['userId'],
       firstname: json['firstname'],

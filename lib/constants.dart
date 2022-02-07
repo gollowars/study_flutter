@@ -7,4 +7,4 @@ Color contentTextColor = const Color(0xff868686);
 Color navigationColor = const Color(0xFF6751B5);
 Color gradientStartColor = const Color(0xFF0050AC);
 Color gradientEndColor = const Color(0xFF9354B9);
-String ENDPOINT = "http://localhost:3000/users";
+String ENDPOINT = "http://10.0.2.2:3000/users";
