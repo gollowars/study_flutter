@@ -2,6 +2,11 @@
 
 A new Flutter project.
 
+
+## required
+moockoon server 
+API : localhost:3000
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
