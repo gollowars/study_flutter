@@ -23,20 +23,31 @@ class HomeReqTemplate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final usersBloc = Provider.of<UsersBloc>(context);
+    bool isLoading = false;
 
     usersBloc.stream.listen((resp) {
-      print('stream listen');
-      print(resp.message);
+      // print('stream listen');
+      // print(resp.message);
     });
+
+    usersBloc.isLoadingStream.listen((isLoading) {
+
+      if (isLoading) {
+        print("loading..");
+      } else {
+        print('not loading');
+      }
+    });
+
     void onPressed() {
-      print('pressed!!');
+      // print('pressed!!');
       usersBloc.fetch();
     }
 
     return Scaffold(
         backgroundColor: Colors.white,
         body: SafeArea(
-          child: Container(
+            child: Container(
           child: Padding(
             padding: const EdgeInsets.only(left: 20, top: 20, right: 20),
             child: Column(
@@ -82,25 +93,27 @@ class HomeReqTemplate extends StatelessWidget {
                             itemBuilder: (context, index) {
                               var user = data.users[index];
 
-                              return  Card(
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
+                              return Card(
+                                  child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
                                     Text('userid : ${user.userId}'),
                                     Text('firstname : ${user.firstname}'),
                                     Text('lastname : ${user.lastname}'),
                                     Text('friedns cnt : ${user.friends.length}')
-                                  ],),
-                                ) 
-                              );
+                                  ],
+                                ),
+                              ));
                             },
                           );
                         }
                       }),
                 ),
-                const SizedBox(height: 20,)
+                const SizedBox(
+                  height: 20,
+                )
               ],
             ),
           ),
