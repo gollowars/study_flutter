@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:netroll/models/user.dart';
 import 'package:netroll/repositories/api_repository.dart';
 import 'package:rxdart/rxdart.dart';
