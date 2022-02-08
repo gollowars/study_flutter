@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:netroll/constants.dart';
 import 'package:netroll/models/user.dart';
 import 'package:netroll/providers/api_provider.dart';
