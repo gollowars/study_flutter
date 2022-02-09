@@ -17,6 +17,8 @@ class SampleNative {
   void getBatteryLevel() async {
     try {
       final int result = await platform.invokeMethod('getBatteryLevel');
+      print("battery is : $result");
+      
       _batterySubject.add('Battery level at $result % .');
     } on PlatformException catch (e) {
       _batterySubject.add("Failed to get battery level : ${e.message}");
