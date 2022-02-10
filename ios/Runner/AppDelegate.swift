@@ -9,7 +9,7 @@ import Flutter
   ) -> Bool {
     
     let controller: FlutterViewController = window?.rootViewController as! FlutterViewController;
-    let batteryChannel = FlutterMethodChannel(name: "samples.flutter/dev/battery", binaryMessenger: controller.binaryMessenger);
+    let batteryChannel = FlutterMethodChannel(name: "samples.flutter.dev/battery", binaryMessenger: controller.binaryMessenger);
     
     batteryChannel.setMethodCallHandler(
         { [weak self] (call: FlutterMethodCall, result: FlutterResult) -> Void in
