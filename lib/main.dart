@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:netroll/widgets/screens/HomeReq.dart';
+// import 'package:netroll/widgets/screens/HomeReq.dart';
+import 'package:netroll/widgets/screens/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity),
-      home: const HomeReq(),
+      home: const HomePage(),
       debugShowCheckedModeBanner: false,
     );
   }
