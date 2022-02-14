@@ -25,5 +25,5 @@ check a post [FlutterでデバイスネイティブAPIを使う。 ](https://vom
 
 
 ### study/arp-scan
-arp scanner app
+arp scanner app, loading sample
 ![](./assets/03_arp-scanner.jpg)
