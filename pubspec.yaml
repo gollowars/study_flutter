@@ -38,6 +38,8 @@ dependencies:
   flutter_swiper: ^1.1.6
   http: ^0.13.4
   rxdart: ^0.27.3
+  arp_scanner: ^1.2.7
+  flutter_easyloading: ^3.0.3
 
 dev_dependencies:
   flutter_test:

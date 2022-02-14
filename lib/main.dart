@@ -1,8 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:netroll/widgets/screens/HomeReq.dart';
+import 'package:netroll/widgets/screens/HomeArpScanner.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 
 void main() {
   runApp(const MyApp());
+  configLoading();
+}
+
+void configLoading() {
+  EasyLoading.instance
+    ..loadingStyle = EasyLoadingStyle.dark
+    ..backgroundColor = Colors.green
+    ..userInteractions = false
+    ..maskType = EasyLoadingMaskType.black;
 }
 
 class MyApp extends StatelessWidget {
@@ -15,8 +25,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity),
-      home: const HomeReq(),
+      home: const HomeArpScanner(),
       debugShowCheckedModeBanner: false,
+      builder: EasyLoading.init(),
     );
   }
 }
