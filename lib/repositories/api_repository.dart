@@ -12,7 +12,7 @@ class UsersRepository {
       final _decodeResponse = await json.decode(_response.body);
       return UserResponse.fromJson(_decodeResponse);
     } else {
-      throw Exception("Rrror");
+      throw Exception("Error");
     }
   }
 }

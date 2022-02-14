@@ -1,16 +1,25 @@
-# netroll
+# Study Flutter Project
 
-A new Flutter project.
+## check branches
+### study/widget_swiper 
+Learn how wigets & swiperplugin works
+reference is [Flutter Design Tutorial | Minimal UI - Part 1](https://www.youtube.com/watch?v=neXfa4J752A)
+![](./assets/00_study_widtets.png)
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+### study/bloc 
+how to use http req designed by BLoC
+required : [Mockoon](https://mockoon.com/)
+![](./assets/01_study_bloc.png)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+ - study/native (how to use native api)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+ ---
+
+### study/native 
+how to use Native API
+check a post [FlutterでデバイスネイティブAPIを使う。 ](https://vomit.me/articles/2022/02/09/11bf68b9fdbef6ea37282630376caa29/flutter-native-code/)
+![](./assets/02_study_native.jpg)
