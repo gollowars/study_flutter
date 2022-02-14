@@ -13,6 +13,7 @@ class ArpBloc {
   List<Device> deviceList = [];
 
   void scan() {
+    // _subject.add([]);
     ArpScanner.onScanning.listen((Device device) {
       deviceList.add(device);
     });
@@ -71,8 +72,9 @@ class HomeArpAcannerTemplate extends StatelessWidget {
               'ArpScanner',
               style: TextStyle(fontFamily: "Raleway", fontSize: 24),
             ),
+            const SizedBox(height: 8),
             ElevatedButton(onPressed: startScan, child: const Text('Scan')),
-            const SizedBox(height: 10),
+            const SizedBox(height: 4),
             Expanded(
                 child: StreamBuilder<List<Device>>(
               stream: arpBloc.stream,
@@ -98,11 +100,11 @@ class HomeArpAcannerTemplate extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('Mac : ${device.mac}'),
-                            Text('ip : ${device.ip}'),
-                            Text('hostname : ${device.hostname}'),
-                            Text('time : ${device.time}'),
-                            Text('vendor : ${device.vendor}'),
+                            Text('MAC : ${device.mac}',style: const TextStyle(fontFamily: "Raleway", fontSize: 14)),
+                            Text('IP : ${device.ip}',style: const TextStyle(fontFamily: "Raleway", fontSize: 14)),
+                            Text('HOSTNAME : ${device.hostname}',style: const TextStyle(fontFamily: "Raleway", fontSize: 14)),
+                            // Text('TIME : ${device.time}'),
+                            // Text('VENDOR : ${device.vendor}'),
                           ],
                         ),
                       ),
