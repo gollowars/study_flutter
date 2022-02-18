@@ -33,5 +33,5 @@ arp scanner app, loading sample
 ---
 
 ### study/sqlite
-sqlite sample on flutter
-![](./assets/04_study_sqlite2.png)
+sqlite sample on flutter using slidable
+![](./assets/04_study_sqlite3.png)
