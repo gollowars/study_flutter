@@ -1,8 +1,9 @@
-import 'package:flutter/material.dart';
-import 'package:netroll/widgets/screens/HomeReq.dart';
 import 'package:netroll/widgets/screens/HomeTable.dart';
+import 'package:flutter/material.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
-void main() {
+void main() async {
+  await initializeDateFormatting('ja');
   runApp(const MyApp());
 }
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity),
-      home: const HomeTable(),
+      home: const HomeTable(), 
       debugShowCheckedModeBanner: false,
     );
   }
