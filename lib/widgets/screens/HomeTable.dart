@@ -83,17 +83,14 @@ class _HomeTableState extends State<HomeTable> {
     }
 
     return Scaffold(
+      appBar: AppBar(title: const Text("Sample Calendar",
+                  style: TextStyle(
+                      fontFamily: 'Raleway',
+                      fontSize: 24))),
       body: SafeArea(
           child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Padding(
-              padding: EdgeInsets.all(14),
-              child: Text("Sample Calendar",
-                  style: TextStyle(
-                      fontFamily: 'Raleway',
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold))),
           TableCalendar(
             locale: 'ja_JP',
             firstDay: kFirstDay,
@@ -132,11 +129,11 @@ class _HomeTableState extends State<HomeTable> {
                     shape: BoxShape.rectangle,
                     borderRadius: BorderRadius.circular(5.0)),
                 weekendDecoration: BoxDecoration(
-                    color: Colors.amber[100],
+                    color: Colors.amber,
                     shape: BoxShape.rectangle,
                     borderRadius: BorderRadius.circular(5.0)),
                 holidayDecoration: BoxDecoration(
-                    color: Colors.amber[100],
+                    color: Colors.amber,
                     shape: BoxShape.rectangle,
                     borderRadius: BorderRadius.circular(5.0)),
                 defaultDecoration: BoxDecoration(
