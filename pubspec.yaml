@@ -38,6 +38,8 @@ dependencies:
   flutter_swiper: ^1.1.6
   http: ^0.13.4
   rxdart: ^0.27.3
+  table_calendar: ^3.0.4
+  intl: ^0.17.0
 
 dev_dependencies:
   flutter_test:
